@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  uv-front:
+    image: liderbackend/uv_front:1.0.8
+    env_file:
+      - .env_universum-si
+    ports:
+      - "3003:3003"
+  uv-backend:
+    image:  liderbackend/uv_backend:1.0.0 
+    env_file:
+      - .env_api-backend
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - "3001:3001"
+  minio:
+    image: minio/minio:latest
+    container_name: uv_minio
+    # env_file:
+    #   - ./minio.env
+    environment:
+      - MINIO_ACCESS_KEY=root
+      - MINIO_SECRET_KEY=12345Az!
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    command: server /data --console-address ":9001"
+    volumes:
+      - 'minio_data:/data'
+    networks:
+      - uv-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  uv-licenses:
+    image:  liderbackend/uv_licenses:1.0.0 
+    env_file:
+      - .env_api-licenses
+networks:
+  uv-network:
+    driver: bridge
+
+volumes:
+  minio_data:
+    driver: local
+
