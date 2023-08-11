@@ -33,7 +33,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
   uv-licenses:
-    image:  liderbackend/uv_licenses:1.0.0 
+    image:  liderbackend/uv_licenses:1.0.1
     env_file:
       - .env_api-licenses
 networks:
