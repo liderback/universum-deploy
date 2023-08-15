@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   uv-front:
-    image: liderbackend/uv_front:1.0.8
+    image: liderbackend/uv_front:3.0.0
     env_file:
       - .env_universum-si
     ports:
@@ -10,6 +10,7 @@ services:
     image:  liderbackend/uv_backend:1.0.0 
     env_file:
       - .env_api-backend
+      - .env_licenses-key
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
@@ -36,6 +37,7 @@ services:
     image:  liderbackend/uv_licenses:1.0.1
     env_file:
       - .env_api-licenses
+      - .env_licenses-key
 networks:
   uv-network:
     driver: bridge
