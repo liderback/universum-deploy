@@ -19,7 +19,7 @@ services:
   uv-backend:
     image: liderbackend/uv_backend:2.0.0
     env_file:
-      - .env_api-backend
+      - .env_api_backend
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
