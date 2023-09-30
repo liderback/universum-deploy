@@ -1,13 +1,19 @@
 version: '3.8'
 services:
   uv-front:
-    image: liderbackend/uv_front:3.0.0
+    image: liderbackend/uv_front:4.0.1
     env_file:
       - .env_universum-si
     ports:
       - "3003:3003"
+  # uv-front: El otro que vayas a agregar
+  #   image: liderbackend/uv_front:4.0.1
+  #   env_file:
+  #     - .env_universum-si
+  #   ports:
+  #     - "3003:3003"
   uv-backend:
-    image:  liderbackend/uv_backend:1.0.0 
+    image:  liderbackend/uv_backend:2.0.0 
     env_file:
       - .env_api-backend
       - .env_licenses-key
