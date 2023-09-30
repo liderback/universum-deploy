@@ -3,32 +3,35 @@ services:
   uv-front:
     image: liderbackend/uv_front:4.0.1
     env_file:
-      - .env_universum-si
+      - .env_universum_si
     ports:
       - "3003:3003"
-  # uv-front: El otro que vayas a agregar
-  #   image: liderbackend/uv_front:4.0.1
-  #   env_file:
-  #     - .env_universum-si
-  #   ports:
-  #     - "3003:3003"
+  uv-sync:
+    image: liderbackend/uv_sync:1.0.0
+    env_file:
+      - .env_universum_sync
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - "3002:3002"
+    networks:
+      - uv-network
   uv-backend:
-    image:  liderbackend/uv_backend:2.0.0 
+    image: liderbackend/uv_backend:2.0.0
     env_file:
       - .env_api-backend
-      - .env_licenses-key
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
       - "3001:3001"
+    networks:
+      - uv-network
   minio:
     image: minio/minio:latest
     container_name: uv_minio
-    # env_file:
-    #   - ./minio.env
     environment:
       - MINIO_ACCESS_KEY=root
-      - MINIO_SECRET_KEY=12345Az!
+      - MINIO_SECRET_KEY=root
     ports:
       - "9000:9000"
       - "9001:9001"
@@ -39,11 +42,6 @@ services:
       - uv-network
     extra_hosts:
       - "host.docker.internal:host-gateway"
-  uv-licenses:
-    image:  liderbackend/uv_licenses:1.0.1
-    env_file:
-      - .env_api-licenses
-      - .env_licenses-key
 networks:
   uv-network:
     driver: bridge
@@ -51,4 +49,3 @@ networks:
 volumes:
   minio_data:
     driver: local
-
