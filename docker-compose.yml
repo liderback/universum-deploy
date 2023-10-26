@@ -3,27 +3,27 @@ services:
   uv-front:
     image: liderbackend/uv_front:4.0.3
     env_file:
-      - .env_universum_si
+      - .env_si
     ports:
       - "3003:3003"
-  uv-sync:
-    image: liderbackend/uv_sync:1.0.0
-    env_file:
-      - .env_universum_sync
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
-    ports:
-      - "3002:3002"
-    networks:
-      - uv-network
   uv-backend:
-    image: liderbackend/uv_backend:2.0.0
+    image: liderbackend/uv_backend:3.0.1
     env_file:
-      - .env_api_backend
+      - .env_api
     extra_hosts:
       - 'host.docker.internal:host-gateway'
     ports:
       - "3001:3001"
+    networks:
+      - uv-network
+  uv-sync:
+    image: liderbackend/uv_sync:2.0.2
+    env_file:
+      - .env_sync
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - "3002:3002"
     networks:
       - uv-network
   minio:
