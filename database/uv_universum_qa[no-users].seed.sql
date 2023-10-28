@@ -3,7 +3,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-INSERT INTO `uv_universum_qa`.`activities` (`id`, `name`, `description`, `objetive`, `evidence`, `indicators`, `slug`, `dba`, `dba2`, `performance_levels`, `reinforce`, `zone`, `subject_id`, `grade_id`) VALUES
+INSERT INTO `uv_universum_db`.`activities` (`id`, `name`, `description`, `objetive`, `evidence`, `indicators`, `slug`, `dba`, `dba2`, `performance_levels`, `reinforce`, `zone`, `subject_id`, `grade_id`) VALUES
 (1, 'Al rescate de las normas', 'El niño se encuentra en un laberinto y allí se le presentan diferentes situaciones.el debe actuar de acuerdo al color del semáforo y a la situación presentada, dando prioridad a quienes lo necesitan.finalmente el niño debe ecoger el color correcto para pasar la calle y continuar.', 'Desarrollar en el estudiante, la capacidad de tomar decisiones, frente a las situaciones que se le presentan.', 'Explica las razones por las que hace una elección. muestra iniciativa en la realización de actividades. demuestra constancia al realizar sus actividades. anticipa algunas consecuencias de las decisiones que toma.', '- Cantidad de movimientos acertados al momento de cruzar. - Cantidad de movimientos no acertados al momento de cruzar. - Cantidad de veces que realizó el juego. - Tiempo que tardó en tomar la decisión', 'al_rescate_de_las_normas', 'Toma decisiones frente a algunas situaciones cotidianas.', NULL, 'Bajo: se le dificulta responder a interrogantes sencillos que se le plantean. Básico: responde ante interrogantes sencillos que se le plantean. Alto: diferencia situaciones correctas e incorrectas de la vida cotidiana. Superior: decide frene a situaciones que se le presentan en la cotidianidad.', 0, 1, 8, 10),
 (2, 'Una vida saludable, para cuidar la tierra', 'El estudiante organizará de forma secuencial el desarrollo de algunas actividades que hacen parte de su cotidianidad,desde que se levanta hasta salir al colegio.', 'Clasificar los elementos que hacen parte de los hábitos de higiene personal y aquellos alimentos que son considerados saludables.', 'Muestra independencia en la realización de prácticas de higiene y alimentación saludables. identifica algunas situaciones que ponen en riesgo su salud y seguridad. contribuye a mantener el aseo y organización de los espacios físicos que utiliza. practica acciones individuales y colectivas que ayudan a prevenir problemas ambientales y a conservar su entorno.', '- Cantidad de elementos ubicados en el lugar incorrecto. - Cantidad de elementos ubicados en el lugar correcto. - Cantidad de veces que el estudiante ingresó.', 'una_vida_saludable_para_cuidar_la_tierra', 'Se apropia de hábitos y prácticas para el cuidado personal y de su entorno.', NULL, 'Bajo: se le dificulta identificar elementos de higiene, así como alimentos saludables. Básico: identifica elementos de higiene y alimentos saludables. Alto: compara elementos de higiene y alimentos saludables con otros que no corresponden. Superior: ordena elementos de higiene y alimentos saludables, siguiendo instrucciones.', 0, 1, 8, 10),
 (3, 'Emociones', 'El estudiante armará un rompecabezas del cuerpo humano,cuando el mouse pase por cada parte se reproducirá el sonido correspondiente al nombre del mismo.', 'Expresar corporalmente, diferentes situaciones, manifestando su agrado o desagrado.', 'Menciona algunas similitudes y diferencias que encuentra entre él y sus compañeros. representa su cuerpo a través de diferentes lenguajes artísticos (dibujo, danza, escultura, rondas, entre otros). manifiesta sus gustos y disgustos frente a diferentes situaciones y reconoce paulatinamente sus emociones.', '- cantidad de similitudes seleccionadas en relación a las caracteristicas del avatar y el segundo personaje. - cantidad de diferencias seleccionadas en relación a las caracteristicas del avatar y el segundo personaje. - cantidad de veces que el estudiante cambió su elección respecto al avatar. - Tiempo utlizado en la actividad.', 'emociones', 'Identifica y valora las características corporales y emocionales en sí mismo y en los demás.', NULL, 'Bajo: se le dificulta responder a interrogantes sencillos que se le plantean. Básico: responde ante interrogantes sencillos que se le plantean. Alto: diferencia situaciones correctas e incorrectas de la vida cotidiana. Superior: decide frene a situaciones que se le presentan en la cotidianidad.', 0, 1, 8, 10),
@@ -32,24 +32,32 @@ INSERT INTO `uv_universum_qa`.`activities` (`id`, `name`, `description`, `objeti
 (26, 'Dominó infantil', '', 'Generar acuerdos de manera colectiva, que le permitan llevar a cabo procesos de secuencia.', 'Propone su punto de vista en espacios de construcción colectiva', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'domino_infantil', 'Participa en la construcción colectiva de acuerdos, objetivos y proyectos comunes.', NULL, 'Bajo: se le dificulta reconocer y establecer acuerdos, así como cantidades mínimas. Básico: Reconoce la importancia de los acuerdos en el momento de realizar actividades sencillos. Alto: Propone acuerdos que le permiten desarrollar actividades de cantidad y secuencia. Superior: Establece acuerdos en procesos colectivos, que le permiten desarrollar actividades de cantidad y secuencia.', 0, 2, 13, 10),
 (27, 'Fuerza Aplicada', '', 'Identificar los cambios producidos en ciertos objetos al aplicarles fuerza y clasificarlos de acuerdo a su resistencia.', 'Pide ayuda cuando se siento abrumado.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'fuerza_aplicada', 'Entender y manjar emociones', NULL, 'Bajo: con dificultad reconoce los cambios que puede lograr,la fuerza aplicada sobre determinados objetos. Básico: Reconoce los cambios que puede lograr la fuerza aplicada sobre determinados objetos. Alto: Analiza los objetos y los cambios que pueden tener al aplicarles fuerza. Superior: Determina los cambios producidos en los objetos al aplicarles fuerza y los clasifica desde el menos hasta el más resistente.', 0, 2, 14, 12),
 (28, 'Rompecabezas', '', 'Crear elementos haciendo uso de figuras geométricas.', 'Se da cuenta de cuando alguien necesita ayuda.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'rompecabezas', 'Entender los sentimientos, necesidades y preocupaciones de los demás', NULL, 'Bajo: se le dificulta identificar figuras geométricas. Básico: Reconoce figuras geométricas y establece relación entre ellas. Alto: Ubica figuras geométricas, que tienen relación entre sí. Superior: Forma elementos, a partir de figuras geométricas.', 2, 0, 15, 11),
+(29, 'Mi casa un lugar seguro', 'Para esta actividad, se visualiza un barrio, en el cual se encuentra un restaurante, un hotel, una escuela, una casa y una tienda. El estudiante tiene que elegir el espacio que considera como su hogar. Al realizar esa elección y dar clic en la casa, debe ingresar a ella y visualizar cada una de sus partes: sala, cocina, comedor, habitación, lavadero, baño, biblioteca.\r\nPosteriormente en un cuadro, debe seleccionar su grupo familiar a partir de las imágenes que aparecen en la parte de afuera de la casa, debe llevarlos hasta ella y ubicarlos en el espacio donde considere permanecen la mayor parte del tiempo, estas imágenes están marcadas (Grupo familiar: papá, mamá, abuelo, abuela, tía, tío, hermana mayor, hermana menor, hermano mayor, hermano menor, bebé, prima, primo). \r\nPosteriormente en otra ventana selecciona las imágenes que correspondan a las diferentes acciones ejecutadas desde el rol de cada uno dentro de su hogar, que le proporcionan seguridad y cuidado. \r\nEjemplo: \r\n- Mamá cocina para que se alimente bien (mamá-Cocinar)\r\n- Papá trabaja para llevar provisión a casa (papá-trabajo).', '', 'Reconoce el valor de la vivienda como el espacio donde tiene lugar su hogar y donde recibe seguridad y cuidado de su familia.', NULL, 'mi_casa_un_lugar_seguro', 'Comprende cambios en las formas de habitar de los grupos humanos, desde el reconocimiento de los tipos de vivienda que se encuentran en el contexto de su barrio, vereda o lugar donde vive.', NULL, NULL, 0, 1, 10, 11),
 (30, 'El Laberinto de los Medios', '', 'comparar contenidos, de medios de comunicación masiva, como la prensa, radio y televisión.', 'identifica las diferencias y semejanzas entre los contenidos provenientes de los diversos medios de comunicación masiva con los que interactúa: radio, televisión, prensa. ', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'el_laberinto_de_los_medios', 'Identifica las características de los medios de comunicación masiva a los que tiene acceso.', NULL, 'Bajo: con dificultad identifica los medios de comunicación masiva. básico:reconoce los medios de comunicación masiva como la radio, prensa y televisión. alto:relaciona el contenido de medios masivos de comunicación, como la radio, prensa y televisión. superior: establece semejanzas y diferencias entre el contenido de medios masivos como la prensa, radio y televisión.', 0, 4, 9, 11),
 (31, 'Animales en su entorno', '', 'Categorizar animales y vegetales en los diferentes niveles tróficos, asignando características propias.', 'Muestra interés sin usar palabras cuando escucha a los demás.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'animales_en_su_entorno', 'Afrontar los conflictos para crecer y aprender', NULL, 'Bajo: se le dificulta reconocer características propias de animales y vegetales. Básico: Reconoce animales y vegetales a partir de sus características propias. Alto: Situa el nombre de cada nivel trófico en el espacio gráfico que corresponde. Superior: Asigna características propias, a cada nivel trófico.', 0, 2, 16, 13),
 (32, 'Mate Mix', '', 'solucionar problemas aditivos y multiplicativos.', 'resuelve problemas aditivos (suma o resta) y multiplicativos (multiplicación o división)de composición de medida y de conteo.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'mate_mix', 'Interpreta, formula y resuelve problemas aditivos de composición, transformación y comparación en diferentes contextos; y multiplicativos, directos e inversos, en diferentes contextos.', NULL, 'bajo: con dificultad reconoce la adición y la multiplicación como métodos para resolver situaciones. básico:reconoce la adición y la multipicación, como métodos para solucionar situaciones. alto:analiza situaciones que requieren solución a partir de la adición y la multiplicación. superior: utiliza la adición y la multiplicación, como métodos para solucionar situaciones.', 0, 4, 11, 13),
-(33, 'Circuitos', '', 'Generar soluciones ante situaciones que afectan a los demás, haciendo uso de elementos sencillos.', 'Evalua el problema con calma y piensa en soluciones.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'circuitos', 'Afrontar los conflictos para crecer y aprender', NULL, 'Bajo: con dificultad identifica elementos que pueden producir corriente. Básico: Identifica elementos sencillos que pueden generar corriente. Alto: Analiza situaciones que afectan a otros y genera soluciones con elementos que producen corriente. Superior: Propone soluciones ante situaciones que afectan a otros y organiza elementos de forma adecuada para generar corriente.', 0, 2, 16, 14);
+(33, 'Circuitos', '', 'Generar soluciones ante situaciones que afectan a los demás, haciendo uso de elementos sencillos.', 'Evalua el problema con calma y piensa en soluciones.', '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'circuitos', 'Afrontar los conflictos para crecer y aprender', NULL, 'Bajo: con dificultad identifica elementos que pueden producir corriente. Básico: Identifica elementos sencillos que pueden generar corriente. Alto: Analiza situaciones que afectan a otros y genera soluciones con elementos que producen corriente. Superior: Propone soluciones ante situaciones que afectan a otros y organiza elementos de forma adecuada para generar corriente.', 0, 2, 16, 14),
+(34, 'La fiesta', 'Para esta actividad, Felipe y sus amigos han planeado una fiesta, para realizarla todos deben aportar un elemento que pueda ser repartido en partes iguales entre todos los invitados que son trece. En cada situación el estudiante tiene 3 opciones de respuesta, por lo cual debe marcar la que considere correspondiente. \r\n- A Martina le corresponde llevar la pizza, debe fraccionarla en 13 porciones iguales. Opciones 13/1 0/13 1/13 R/ Utiliza la fracción 13/1 \r\nAndrés debe llevar caramelos, según sus cuentas le corresponden 3 a cada invitado ¿Cuántos caramelos debe llevar? Opciones 13, 26, 30 R/ Debe comprar 13 caramelos. \r\n- A Luisa le corresponde la gaseosa compró una promoción donde cada botella contiene 1.300 ml, debe decidir cuántas botellas comprar y garantizar que a cada invitado le corresponda la misma cantidad (200ml). Opciones 1 botella, 5 botellas, 2 botellas. R/ Debe llevar 2 botellas.', '', 'Interpreta y utiliza números naturales y racionales (fraccionarios) asociados con un contexto para solucionar problemas.', NULL, 'la_fiesta', 'Interpreta y utiliza los números naturales y racionales en su representación fraccionaria para formular y resolver problemas aditivos, multiplicativos y que involucren operaciones de potenciación.', NULL, NULL, 0, 1, 11, 15),
+(35, 'CampoFresco Supermarket', 'El estudiante llega a la zona comercial a vender cada uno de sus productos. El pago de dichos productos se le cargan en una billetera virtual, solo puede ser utilizada en la zona comercial. Vende: - Lana= $500 cada ovillo. - Huevos= $100 cada uno. - Leche= $300 cada litro. - Naranja= $50 cada una. - Maíz= $100 cada mazorca. - Papaya= $150 cada una. Vende cada uno de los productos de la granja y de la siembra.', 'Definir el dinero como recurso para adquirir y vender bienes y servicios.', null, '- Cantidad de cada uno de los objetos vendidos. - Cantidad de objetos vendidos en total. - Cifra de dinero recolectado con la venta. - Tiempo utilizado en la actividad.', 'campofresco_supermarket', 'Reconoce que el dinero es un recurso y un medio de intercambio para obtener bienes y servicios.', null, 'Bajo: Con dificultad reconoce el dinero como un recurso económico. Básico: Reconoce el dinero como un recurso económico. Alto: Analiza el precio asignado a diferentes productos. Superior: Determina que el dinero es el recurso utilizado para obtener y vender productos y servicios.', 0, 3, 13, 13),
+(36, 'Granja Solidaria', 'El estudiante ingresa a una granja en la que dispone de: 1. Cinco gallinas ponen un huevo por minuto, lo ideal es que permanezca recogiendo huevos durante 5 minutos. 2. Tres vacas lecheras producen 2 litros de leche por día. 3. Una oveja a la que le corta la lana cada tres minutos. Seguido de ello, se le presenta una situación, donde debe ayudar a algunas personas que presentan escasez de algunos recursos: - Tres personas necesitan recursos para el sustento de sus familias, debe revisar si puede proporcionarlos, pues hay escasez en el supermercado local. Necesitan: 3 huevos, tiene 6 huevos. Necesitan 2 litros de leche, tiene 3 litros. Necesitan 5 ovillos de lana para tejer, tiene 5.', 'Establecer diferencias entre la abundancia y la escasez, compartiendo de lo que tiene.', null, '- Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'granja_solidaria', 'Comprende la relación entre la abundancia y la escasez de recursos.', null, 'Bajo: Presenta dificultades para reconocer los términos: abundancia y escasez. Básico: Define los términos: abundancia y escasez. Alto: Interpreta que la cantidad de productos que posee, le indican abundacia. Superior: Aplica el valor de compartir, al dar de su abundancia a quienes tienen escasez.', 0, 3, 14, 12),
+(37, 'Aventura Verde', 'La misión del estudiante para esta actividad, es cultivar algunos productos que pueda ofrecer, por lo tanto llega al campo de siembra y aquí se le proporcionan tres clases de semillas, para que las siembre y cuide de ellas. Pasado el tiempo estipulado para cosechar cada semilla, puede recoger el fruto de su trabajo. Entre las semillas se tiene: - Naranja: Tiempo de cosecha un minuto. - Maíz: Tiempo de cosecha dos minutos. - Papaya: Tiempo de cosecha tres minutos. El estudiante debe esperar el tiempo que demora el crecimiento, de lo contrario se mueren sus productos y debe volver a cultivarlo en caso que suceda. Posteriormente, va a uno de los stands de la zona comercial (específicamente al de venta de frutos) y le cargan su billetera virtual por cada producto, así: - Naranja $50 - Maíz $100 - Papaya $150 El dinero ganado en esta actividad va a la billetera virtual que se muestra en todas las actividades de esta zona, por lo cual puede realizar varios intentos.', 'Determinar que la existencia de recursos, garantiza el bienestar de las personas.', null, '- Cantidad de naranjas sembradas. - Cantidad de naranjas cosechadas. - Cantidad de maiz sembrado. - Cantidad de maiz cosechado. - Cantidad de papaya sembrada. - Cantidad de papaya cosechada. - Cantidad de naranjas vendidas. - Cantidad de maiz vendido. - Cantidad de papayas vendidas. - Cantidad total de objetos vendidos. - Cifra de dinero recolectado. - Tiempo utilizado en la actividad.', 'aventura_verde', 'Comprende la relación existente entre los diversos tipos de recursos y el bienestar de las personas.', null, 'Bajo: Demuestra poco conocimiento frente a la definición de recursos. Básico: Reconoce que es un recurso y su importancia. Alto: Genera recursos a partir de las herramientas entregadas, siembra y cosecha. Superior: Explica la importancia de los recursos para el bienestar de las personas.', 0, 3, 14, 11),
+(38, 'Moda Mágica', 'El estudiante llega a una de las tiendas de la zona comercial donde la misión es adquirir prendas que pueda pagar con la billetera virtual. El estudiante escoge las prendas, las compra y el avatar se actualiza. Al finalizar la compra, se le mostrará al estudiante cuánto tenía en la billetera virtual y cuáles son los valores de las prendas que compró, la idea es que el estudiante pueda sumar los gastos y los reste con lo que tenía inicialmente, para que pueda relacionar sus ingresos con los gastos.', 'Establecer correspondencia entre sus ingresos y gastos.', null, 'Cantidad de prendas compradas. Cantidad de dinero gastado. - Cantidad de aciertos. - Cantidad de errores. - Tiempo utilizado en la actividad.', 'moda_mágica', 'Relaciona en un presupuesto sus ingresos y sus gastos.', null, 'Bajo: Presenta falencias para diferenciar ingresos y gastos. Básico: Diferencia ingresos y gastos en un presupuesto. Alto: Evalua sus necesidades para adquirir productos. Superior: Realiza un presupuesto que le permita gastar a partir de sus ingresos.', 0, 3, 13, 15),
+(39, 'Reparación estelar', 'El estudiante llega a la zona comercial de objetos variados con la misión de adquirir elementos para su nave y personalizarla. La nave se ha averiado y necesita repararla, debe revisar su billetera virtual, se le indica que sus gastos no deben ser superiores a $30.000. Los elementos que se muestran son: - Tapete por valor de $300 - Cinta para pegar por valor de $250 - Kit de herramientas $800 - Binoculares por valor de $450 - Espejo por valor de $500 - Bombilla muy luminosa por valor de $100 - Pintura $500 - Rompecabezas por valor de $750 - Video juego por valor de $1.200 - Fichas por valor de $900 Al finalizar la compra, debe seleccionar qué objetos fueron una necesidad para reparar su nave y que objetos fueron un gasto.', 'Especificar los gastos realizados para suplir necesidades y aquellos innecesarios.', null, '- Cantidad de cada uno de los objetos comprados. - Cantidad total de los objetos. - Cifra total gastada en la compra. comprados. - Cantidad de objetos comprados necesarios. - Cantidad de objetos comprados por gusto. - Tiempo utilizado en la actividad.', 'reparación_estelar', 'Identifica los diferentes tipos de ingresos y gastos y reconoce cuáles son sus necesidades y cuáles son sus deseos.', null, 'Bajo: Con dificultad establece diferencia entre necesidades y deseos. Básico: Reconoce aquellos recursos que hacen parte de sus necesidades. Alto: Adquiere productos que permiten suplir sus necesidades y otros sus deseos. Superior: Detalla los gastos realizados para suplir necesidades de aquellos adquiridos por deseo.', 0, 3, 13, 14),
+(40, 'Peludos Galácticos ', 'El estudiante llega a la zona comercial y allí al stand de mascotas, aparece un menú donde están las opciones de varias mascotas, la misión es adquirir una mascota, que pueda acompañarlo en la nave y cuidar de ella mientras él sale. Mascotas disponibles: - Perro $8.000 - Gato $9.000 - Conejo $5.000 - Hamsters $4.000 - Tortuga $10.000 En el momento en que adquiera la mascota, el valor será descontado de su billetera. Lleva la mascota a la nave y lo espera allí, cada vez que el estudiante finalice una misión.', 'Determinar como la adquisición de recursos, son motivo de bienestar para las personas.', null, '- Cantidad de cada uno d elos objetos comprados. - Cantidad total de los objetos comprados. - Tiempo de la actividad. - Cifra de dinero gastada en la compra.', 'peludos_galácticos', 'Comprende la relación existente entre los diversos tipos de recursos y el bienestar de las personas.', null, 'Bajo: Se le dificulta reconocer sus necesidades. Básico: Reconoce los recursos necesarios para su bienestar y el de las personas. Alto: Adquiere productos que permiten suplir sus necesidades. Superior: Explica como el adquirir determinados recursos, es motivo de bienestar para las personas.', 0, 3, 14, 10);
 
-INSERT INTO `uv_universum_qa`.`activities_thinking_skills`(`activities_id`, `thinking_skills_id`) VALUES
+INSERT INTO `uv_universum_db`.`activities_thinking_skills`(`activities_id`, `thinking_skills_id`) VALUES
 (18,1), (1,1), (31,5), (24,2), (37,6), (5,4), (35,2), (33,3), (4,2), (12,2), (13,2), (6,2), (22,5), (26,2), (19,2), (30,4), (10,5), (9,2), (3,3), (20,2), (27,2), (36,3), (16,5), (17,2), (32,5), (7,1), (38,3), (40,5), (14,2), (14,5), (23,4), (39,5), (11,1), (28,2), (21,3), (15,2), (25,5), (8,2), (2,2);
 
-INSERT INTO `uv_universum_qa`.`activities_century_skills` (`activities_id`, `century_skills_id`) VALUES
+INSERT INTO `uv_universum_db`.`activities_century_skills` (`activities_id`, `century_skills_id`) VALUES
 (1, 1),(2, 1),(3, 1),(4, 1),(5, 1),(6, 2),(6, 4),(7, 1),(8, 1),(8, 3),(8, 4),(9, 1),(9, 3),(10, 1),(10, 2),(10, 3),(11, 1),(11, 3),(12, 1),(12, 3),(13, 1),(13, 3),(14, 1),(14, 3),(15, 1),(15, 3),(16, 1),(16, 2),(16, 3),(17, 1),(17, 2),(17, 3),(18, 1),(18, 3),(19, 1),(19, 3),(20, 1),(20, 3),(21, 1),(21, 2),(21, 3),(21, 4),(22, 1),(22, 2),(22, 3),(22, 4),(23, 1),(23, 3),(24, 1),(24, 2),(24, 3),(24, 4),(25, 1),(25, 2),(25, 3),(25, 4);
 
-INSERT INTO `uv_universum_qa`.`century_skills` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`century_skills` (`id`, `name`) VALUES
 (1, 'Toma de decisiones'),
 (2, 'Resolución de problemas'),
 (3, 'Pensamiento critico'),
 (4, 'Lecto-escritura');
 
-INSERT INTO `uv_universum_qa`.`branches` (`id`, `name`, `dane_code`, `town_id`, `institution_id`) VALUES
+INSERT INTO `uv_universum_db`.`branches` (`id`, `name`, `dane_code`, `town_id`, `institution_id`) VALUES
 (100, 'SANTA ISABEL', '17656300002402', 10, 100),
 (101, 'FRANCISCO ANTONIO ZEA CENTRO', '17656300009107', 10, 101),
 (102, 'ALFREDO POSADA CORREA', '17656300082201', 10, 102),
@@ -981,7 +989,7 @@ INSERT INTO `uv_universum_qa`.`branches` (`id`, `name`, `dane_code`, `town_id`, 
 (1028, 'MARIANO OSPINA PEREZ', '47605400001917', 23, 141),
 (1029, 'CARLOS ENRIQUE RESTREPO', '27682800017402', 33, 234),
 (1030, 'PARAISO', '27610000054212', 20, 207);
-INSERT INTO `uv_universum_qa`.`branches` (`id`, `name`, `dane_code`, `town_id`, `institution_id`) VALUES
+INSERT INTO `uv_universum_db`.`branches` (`id`, `name`, `dane_code`, `town_id`, `institution_id`) VALUES
 (1031, 'SAN JUAN BOSCO', '17682300038406', 37, 164),
 (1032, 'ROSA ZARATE DE PEÑA', '27661600025507', 25, 221),
 (1033, 'SAN JUAN BAUTISTA', '27610000025905', 20, 123),
@@ -1124,25 +1132,25 @@ INSERT INTO `uv_universum_qa`.`branches` (`id`, `name`, `dane_code`, `town_id`, 
 (1170, 'NUESTRA SRA DE LOURDES', '27613000082203', 15, 150),
 (1171, 'JARDIN MI PEQUEÑO MUNDO', '17610000025403', 20, 121);
 
-INSERT INTO `uv_universum_qa`.`cashes` (`id`, `name`, `snip`, `type_id`) VALUES
+INSERT INTO `uv_universum_db`.`cashes` (`id`, `name`, `snip`, `type_id`) VALUES
 (1, 'Moneda Universum', 'universum_coin', 1);
 
-INSERT INTO `uv_universum_qa`.`cash_types` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`cash_types` (`id`, `name`) VALUES
 (1, 'univ_coin'),
 (2, 'univ_badge');
 
-INSERT INTO `uv_universum_qa`.`categories` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`categories` (`id`, `name`) VALUES
 (1, 'Educativo'),
 (2, 'Personal'),
 (3, 'Recompensa');
 
-INSERT INTO `uv_universum_qa`.`countries` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`countries` (`id`, `name`) VALUES
 (1, 'COLOMBIA');
 
-INSERT INTO `uv_universum_qa`.`departments` (`id`, `name`, `dane_code`, `country_id`) VALUES
+INSERT INTO `uv_universum_db`.`departments` (`id`, `name`, `dane_code`, `country_id`) VALUES
 (1, 'VALLE DEL CAUCA', '76', 1);
 
-INSERT INTO `uv_universum_qa`.`grades` (`id`, `num`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`grades` (`id`, `num`, `name`) VALUES
 (10, 0, 'Transicion'),
 (11, 1, 'Primero'),
 (12, 2, 'Segundo'),
@@ -1156,7 +1164,7 @@ INSERT INTO `uv_universum_qa`.`grades` (`id`, `num`, `name`) VALUES
 (20, 10, 'Decimo'),
 (21, 11, 'Once');
 
-INSERT INTO `uv_universum_qa`.`imgs` (`id`, `hashable`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`imgs` (`id`, `hashable`, `name`) VALUES
 ('0046571c-f33b-4b19-b515-e46cf035b1f4', 'ByJ$Cq]g6e%>kALHrm', '/picpass_22.png'),
 ('10858c44-a460-488f-adfe-8daee2858cb1', 'UD2Z^5;RQWv}B6hmuN', '/picpass_25.png'),
 ('1316ab69-2cf8-4247-97d1-0ed3eaa24c2e', 'EB$6GbPuUv7;/+8@jq', '/picpass_20.png'),
@@ -1218,7 +1226,7 @@ INSERT INTO `uv_universum_qa`.`imgs` (`id`, `hashable`, `name`) VALUES
 ('f5e05ebd-b433-4fb6-8367-40e068e2f541', 'zF]aH84;MPAG{N%^q2', '/picpass_28.png'),
 ('f7e16012-0928-4909-974e-ddbe99bfb49f', 'b%GJh@n3>N-4+5f}Mx', '/picpass_27.png');
 
-INSERT INTO `uv_universum_qa`.`institutions` (`id`, `name`, `dane_code`) VALUES
+INSERT INTO `uv_universum_db`.`institutions` (`id`, `name`, `dane_code`) VALUES
 (100, 'IE ATENEO', '176563000024'),
 (101, 'IE FRANCISCO ANTONIO ZEA', '176563000091'),
 (102, 'IE ALFREDO POSADA CORREA', '176563000822'),
@@ -1365,37 +1373,39 @@ INSERT INTO `uv_universum_qa`.`institutions` (`id`, `name`, `dane_code`) VALUES
 (243, 'CE RODRIGO LLOREDA CAICEDO', '276622000305'),
 (244, 'CE JOHN F. KENNEDY', '276126000133');
 
-INSERT INTO `uv_universum_qa`.`items` (`id`, `name`, `snip`, `value`, `properties`, `category_id`) VALUES
-(1, 'cosecha de manzana', 'apple_gather', 750, NULL, 1),
-(2, 'cosecha de uva', 'grapes_gather', 750, NULL, 1),
-(3, 'semillas de pera', 'pear_seed', 500, NULL, 1),
-(4, 'semillas de maiz', 'corn_seed', 500, 'clima_calido', 1),
-(5, 'semillas de colina', 'cabbage_seed', 500, 'clima_frio', 1),
-(6, 'semillas de tomate', 'tomatoes_seed', 500, 'clima_calido', 1),
-(7, 'semillas de zanahoria', 'carrot_seed', 500, 'clima_frio', 1),
-(8, 'cosecha de tomate', 'tomatoes_gather', 750, NULL, 1),
-(9, 'semillas de papaya', 'papaya_seed', 500, 'clima_calido', 1),
-(10, 'semillas de patata', 'potatoes_seed', 500, 'clima_frio', 1),
-(11, 'cosecha de pera', 'pear_gather', 750, 'clima_frio', 1),
-(12, 'semillas de rábano', 'radish_seed', 500, NULL, 1),
-(13, 'semillas de naranja', 'orange_seed', 500, 'clima_calido', 1),
-(14, 'semillas de aguacate', 'avocado_seed', 1500, 'clima_calido', 1),
-(15, 'cosecha de mora', 'blackberry_gather', 750, NULL, 1),
-(16, 'cosecha de rabano', 'radish_gather', 750, NULL, 1),
-(17, 'cosecha de zanahoria', 'carrot_gather', 750, NULL, 1),
-(18, 'semillas de mora', 'blackberry_seed', 500, 'clima_frio', 1),
-(19, 'semillas de habichuelas', 'greenbean_seed', 300, 'clima_frio', 1),
-(20, 'semillas de sandia', 'watermelon_seed', 500, 'clima_calido', 1),
-(21, 'semillas de manzana', 'apple_seeds', 500, 'clima_frio', 1),
-(22, 'semillas de uva', 'grapes_seed', 500, NULL, 1),
-(23, 'cosecha de patata', 'potatoe_gather', 750, NULL, 1),
-(24, 'cosecha de col', 'cabbage_gather', 750, NULL, 1),
-(25, 'cosecha de sandias', 'watermelon_gather', 500, NULL, 1),
+INSERT INTO `uv_universum_db`.`items` (`id`, `name`, `snip`, `value`, `properties`, `category_id`) VALUES
+(1, 'Manzana', 'apple_gather', 750, NULL, 1),
+(2, 'Uva', 'grapes_gather', 750, NULL, 1),
+(3, 'Semillas de Pera', 'pear_seed', 500, NULL, 1),
+(4, 'Semillas de Maiz', 'corn_seed', 500, 'clima_calido', 1),
+(5, 'Semillas de Colina', 'cabbage_seed', 500, 'clima_frio', 1),
+(6, 'Semillas de Tomate', 'tomatoes_seed', 500, 'clima_calido', 1),
+(7, 'Semillas de Zanahoria', 'carrot_seed', 500, 'clima_frio', 1),
+(8, 'Tomate', 'tomatoes_gather', 750, NULL, 1),
+(9, 'Semillas de Papaya', 'papaya_seed', 500, 'clima_calido', 1),
+(10, 'Semillas de Patata', 'potatoes_seed', 500, 'clima_frio', 1),
+(11, 'Pera', 'pear_gather', 750, 'clima_frio', 1),
+(12, 'Semillas de Rábano', 'radish_seed', 500, NULL, 1),
+(13, 'Semillas de Naranja', 'orange_seed', 500, 'clima_calido', 1),
+(14, 'Semillas de Aguacate', 'avocado_seed', 1500, 'clima_calido', 1),
+(15, 'Mora', 'blackberry_gather', 750, NULL, 1),
+(16, 'Rabano', 'radish_gather', 750, NULL, 1),
+(17, 'Zanahoria', 'carrot_gather', 750, NULL, 1),
+(18, 'Semillas de Mora', 'blackberry_seed', 500, 'clima_frio', 1),
+(19, 'Semillas de Habichuelas', 'greenbean_seed', 300, 'clima_frio', 1),
+(20, 'Semillas de Sandia', 'watermelon_seed', 500, 'clima_calido', 1),
+(21, 'Semillas de Manzana', 'apple_seeds', 500, 'clima_frio', 1),
+(22, 'Semillas de Uva', 'grapes_seed', 500, NULL, 1),
+(23, 'Patata', 'potatoe_gather', 750, NULL, 1),
+(24, 'Col', 'cabbage_gather', 750, NULL, 1),
+(25, 'Sandias', 'watermelon_gather', 500, NULL, 1),
 (26, 'Insignia de Oro', 'gold_badge', 1500, 'badge', 3),
 (27, 'Insignia de Plata', 'plate_badge', 1000, 'badge', 3),
-(28, 'Insignia de Bronce', 'bronze_badge', 500, 'badge', 3);
+(28, 'Insignia de Bronce', 'bronze_badge', 500, 'badge', 3),
+(29, 'Papaya', 'papaya_gather', 250, NULL, 1),
+(30, 'Maiz', 'corn_gather', 350, NULL, 1);
 
-INSERT INTO `uv_universum_qa`.`roles` (`id`, `name`, `display`) VALUES
+INSERT INTO `uv_universum_db`.`roles` (`id`, `name`, `display`) VALUES
 (1, 'coordinator', 'Coordinador'),
 (2, 'secretary', 'Secretaria'),
 (3, 'township', 'Municipio'),
@@ -1406,19 +1416,21 @@ INSERT INTO `uv_universum_qa`.`roles` (`id`, `name`, `display`) VALUES
 (8, 'teacher', 'Docente'),
 (9, 'admin', 'Administrador');
 
-INSERT INTO `uv_universum_qa`.`school_years` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`school_years` (`id`, `name`) VALUES
 (1, 2023),
 (2, 2024);
 
-INSERT INTO `uv_universum_qa`.`subjects` (`id`, `name`, `snip`) VALUES
+INSERT INTO `uv_universum_db`.`subjects` (`id`, `name`, `snip`) VALUES
 (7, 'Naturales', 'naturals'),
 (8, 'Ciudadana', 'citizen'),
 (9, 'Lenguaje', 'language'),
 (10, 'Sociales', 'social'),
 (11, 'Matemáticas', 'mathematics'),
-(12, 'Comunicativa', 'communication');
+(12, 'Comunicativa', 'communication'),
+(13, 'Finanzas', 'finances'),
+(14, 'Economía', 'economy');
 
-INSERT INTO `uv_universum_qa`.`thinking_skills` (`id`, `name`) VALUES
+INSERT INTO `uv_universum_db`.`thinking_skills` (`id`, `name`) VALUES
 (1, 'Recordar'),
 (2, 'Aplicar'),
 (3, 'Evaluar'),
@@ -1426,7 +1438,7 @@ INSERT INTO `uv_universum_qa`.`thinking_skills` (`id`, `name`) VALUES
 (5, 'Analizar'),
 (6, 'Crear');
 
-INSERT INTO `uv_universum_qa`.`towns` (`id`, `name`, `dane_code`, `department_id`) VALUES
+INSERT INTO `uv_universum_db`.`towns` (`id`, `name`, `dane_code`, `department_id`) VALUES
 (10, 'PRADERA', '563', 1),
 (11, 'GUACARI', '318', 1),
 (12, 'YOTOCO', '890', 1),
@@ -1462,11 +1474,11 @@ INSERT INTO `uv_universum_qa`.`towns` (`id`, `name`, `dane_code`, `department_id
 (42, 'SAN PEDRO', '670', 1),
 (43, 'CALIMA EL DARIEN', '126', 1);
 
-INSERT INTO `uv_universum_qa`.`profiles` (`id`, `name`, `lastname`, `gender`, `birth`, `age`, `disability`) VALUES
+INSERT INTO `uv_universum_db`.`profiles` (`id`, `name`, `lastname`, `gender`, `birth`, `age`, `disability`) VALUES
 ('188c23ff-66be-11ee-8cc1-7085c296afc1', 'Universum', 'Admin', NULL, NULL, NULL, NULL);
 
-INSERT INTO `uv_universum_qa`.`users` (`id`, `keycloak_sub_id`, `username`, `email`, `password`, `active`, `activation_token`, `reset_password_token`, `pic_pass`, `first_login`, `first_select_avatar`, `validated_by_parent`, `created_on`, `profile_id`, `enrolment_id`, `inventory_id`, `finance_id`, `avatar_id`, `role_id`) VALUES
-(999999, '', 'uvadmin2023', 'uvadmin2023@yopmail.com', '$2a$10$GzbhDlhIsiM/F6ptBBYlrO0GMxNljT9z4VmLsH5YsAW6it/.BblxS', 0, NULL, NULL, 0, 0, 0, 0, '2023-10-01 10:04:10.069000', '188c23ff-66be-11ee-8cc1-7085c296afc1', NULL, NULL, NULL, NULL, 9);
+INSERT INTO `uv_universum_db`.`users` (`id`, `keycloak_sub_id`, `username`, `email`, `password`, `active`, `activation_token`, `reset_password_token`, `pic_pass`, `first_login`, `first_select_avatar`, `validated_by_parent`, `created_on`, `profile_id`, `enrolment_id`, `inventory_id`, `finance_id`, `avatar_id`, `role_id`) VALUES
+(999999, '', 'uvadmin2023', 'uvadmin2023@yopmail.com', '$2a$10$GzbhDlhIsiM/F6ptBBYlrO0GMxNljT9z4VmLsH5YsAW6it/.BblxS', 1, NULL, NULL, 0, 0, 0, 0, '2023-10-01 10:04:10.069000', '188c23ff-66be-11ee-8cc1-7085c296afc1', NULL, NULL, NULL, NULL, 9);
 
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
