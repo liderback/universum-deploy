@@ -7,7 +7,7 @@ services:
     ports:
       - "3003:3003"
   uv-backend:
-    image: liderbackend/uv_backend:3.0.2
+    image: liderbackend/uv_backend:3.0.3
     env_file:
       - .env_api
     extra_hosts:
@@ -17,7 +17,7 @@ services:
     networks:
       - uv-network
   uv-sync:
-    image: liderbackend/uv_sync:2.0.3
+    image: liderbackend/uv_sync:2.0.4
     env_file:
       - .env_sync
     extra_hosts:
@@ -31,7 +31,7 @@ services:
     container_name: uv_minio
     environment:
       - MINIO_ACCESS_KEY=root
-      - MINIO_SECRET_KEY=13245Az!
+      - MINIO_SECRET_KEY=12345Az!
     ports:
       - "9000:9000"
       - "9001:9001"
