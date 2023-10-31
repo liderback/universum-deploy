@@ -1721,6 +1721,8 @@ CREATE TABLE `licenses` (
   `tumlab_name` varchar(155) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `licenses` (`id`, `serial`, `owner`, `expired_date`, `tumlab_name`) VALUES ('d8c3b676-782f-11ee-8f83-2cf05d8dbc0d', 'serialadminuv', '999999', '2030-10-31', 'admintumlab');
+
 CREATE TABLE `profiles` (
   `id` varchar(36) COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(55) COLLATE utf8mb4_general_ci NOT NULL,
