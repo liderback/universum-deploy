@@ -1,17 +1,20 @@
 version: '3.8'
 services:
   uv-front:
-    image: liderbackend/uv_front:4.0.3
+    image: liderbackend/uv_front:4.0.4
     env_file:
       - .env_si
     ports:
       - "3003:3003"
+    extra_hosts:
+      - 'tumlab.local:192.168.4.1'
   uv-backend:
     image: liderbackend/uv_backend:3.0.3
     env_file:
       - .env_api
     extra_hosts:
       - 'host.docker.internal:host-gateway'
+      - 'tumlab.local:192.168.4.1'
     ports:
       - "3001:3001"
     networks:
@@ -22,6 +25,7 @@ services:
       - .env_sync
     extra_hosts:
       - 'host.docker.internal:host-gateway'
+      - 'tumlab.local:192.168.4.1'
     ports:
       - "3002:3002"
     networks:
