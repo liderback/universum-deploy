@@ -1,13 +1,8 @@
 SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
+USE uv_universum_db;
 SET time_zone = "+00:00";
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 
 CREATE TABLE `activities` (
   `id` int NOT NULL,
@@ -1841,6 +1836,15 @@ INSERT INTO `towns` (`id`, `name`, `dane_code`, `department_id`) VALUES
 (42, 'SAN PEDRO', '670', 1),
 (43, 'CALIMA EL DARIEN', '126', 1);
 
+CREATE TABLE `login_record` (
+  `id` int NOT NULL,
+  `username` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `role` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `loginSuccess` tinyint NOT NULL,
+  `loginAt` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  `ipAddress` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 CREATE TABLE `transactions` (
   `id` varchar(36) COLLATE utf8mb4_general_ci NOT NULL,
   `transaction_id` varchar(55) COLLATE utf8mb4_general_ci NOT NULL,
@@ -2005,6 +2009,9 @@ ALTER TABLE `towns`
   ADD PRIMARY KEY (`id`),
   ADD KEY `FK_9622a3805504447b728dd24844d` (`department_id`);
 
+ALTER TABLE `login_record`
+  ADD PRIMARY KEY (`id`);
+
 ALTER TABLE `transactions`
   ADD PRIMARY KEY (`id`);
 
@@ -2076,6 +2083,9 @@ ALTER TABLE `thinking_skills`
 
 ALTER TABLE `towns`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+
+ALTER TABLE `login_record`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 ALTER TABLE `users`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1000000;
