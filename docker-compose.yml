@@ -9,7 +9,7 @@ services:
     extra_hosts:
       - 'tumlab.local:192.168.4.1'
   uv-backend:
-    image: liderbackend/uv_backend:3.0.4
+    image: liderbackend/uv_backend:3.0.5
     env_file:
       - .env_api
     extra_hosts:
