@@ -8,7 +8,7 @@ services:
       - "3003:3003"
     restart: always
   uv-backend:
-    image: liderbackend/uv_backend:3.1.6
+    image: liderbackend/uv_backend:3.1.7
     env_file:
       - .env_api-backend
     extra_hosts:
